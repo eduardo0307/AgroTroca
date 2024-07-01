@@ -1,0 +1,58 @@
+body {
+    font-family: Aral, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    margin: 2em;
+}
+
+main {
+    padding: 2em;
+}
+
+form {
+    display: flex;
+}
+
+form label {
+    margin-top: 1em;
+}
+
+form input {
+    padding: 0.5m;
+    margin-top: 0.5em;
+}
+
+form button {
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin: 0.5em 0;
+    padding: 1em;
+    border: 1px solid #ddd;
+}
