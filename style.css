@@ -1,7 +1,8 @@
 body {
-    font-family: Aral, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
@@ -12,24 +13,205 @@ header {
 }
 
 nav a {
-    margin: 2em;
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 main {
     padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #4caf50;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.product.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.product.item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;    
+}
+
+.product.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-nome {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.1em;
+    color: #4caf50;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+.product-item .product-description {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 1em;
+}
+
+.product-item .product-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-item .btn {
+    padding: 0.5em 1em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.product-item .btn:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    header, main {
+        padding: 1em;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .product.list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product.item {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.hero {
+    text-align: center;
+    background: #4caf50;
+    color: white;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    margin: 0.5em 0;
+}
+
+.hero p {
+    margin: 1em 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 1em 0.5em;
+    background-color: white;
+    color: #4caf50;
+    border: 1px solid #4caf50;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.hero .btm:hover {
+    background-color: #4caf50;
+    color: white;
 }
 
 form {
     display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
 }
 
 form label {
-    margin-top: 1em;
+    margin-top: 0.5em;
+    font-weight: bold;
+    color: #333;
 }
 
 form input {
     padding: 0.5m;
-    margin-top: 0.5em;
+    margin-top: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input::placeholder {
+    color: #aaa;
+}
+
+.btn {
+    padding: 0.75em;
+    background-color: #4caf50;
+    color: white;
+    border: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
 }
 
 form button {
@@ -38,11 +220,42 @@ form button {
     background-color: #4caf50;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-form button {
+form button:hover {
     background-color: #45a049;
+}
+
+.feedback {
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 4px;
+    display: none;
+    text-align: center;
+}
+
+.feedback.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.feedback.error {
+    background-color: #f44336;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    header, main {
+        padding: 1em;
+    }
+
+    nav a {
+        display: block;
+        margin: o.5em 0;
+    }
 }
 
 ul {
@@ -51,8 +264,29 @@ ul {
 }
 
 li {
-    background-color: #f9f9f9;
+    background-color: #fff;
     margin: 0.5em 0;
     padding: 1em;
     border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: backgroun-color 0.3s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 600px) {
+    header, main {
+        padding: 1em;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .hero {
+        padding: 1em;
+    }
 }
