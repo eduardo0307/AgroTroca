@@ -12,6 +12,69 @@ header {
     text-align: center;
 }
 
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+}
+
+#search-form {
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    transform: translateY(-50%);    
+}
+
+#search-input {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 200px;
+}
+
+#search-form button {
+    padding: 0.5em 1em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #45a049;
+}
+
+#testimonials {
+    background-color: #f2f2f2;
+    padding: 2em;
+    text-align: center;
+}
+
+#testimonials h2 {
+    margin-bottom: 1em;
+}
+
+.testimonial {
+    margin: 1em;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.5em;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+
+
 nav a {
     color: white;
     margin: 0 1em;
@@ -58,7 +121,10 @@ h2 {
 }
 
 .product.item {
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1em;
@@ -90,10 +156,33 @@ h2 {
     margin-bottom: 1em;
 }
 
+.product-item .product-name {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.product-item .product-price {
+    color: #4caf50;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+
 .product-item .product-description {
     font-size: 0.9em;
     color: #777;
     margin-bottom: 1em;
+}
+
+.product-item .product-brand,
+.product-item .product-type,
+.product-item .product-condition,
+.product-item .product-discount,
+.product-item .product-rating,
+.product-item .product-gender,
+.product-item .product-size {
+    font-size: 0.8em;
+    margin-bottom: 0.3em;
 }
 
 .product-item .product-actions {
@@ -105,10 +194,12 @@ h2 {
     padding: 0.5em 1em;
     background-color: #4caf50;
     color: white;
+    padding: 0.5em;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.9em;
+    margin: 0.2em;
     transition: background-color 0.3s;
 }
 
@@ -138,18 +229,29 @@ h2 {
 }
 
 .hero {
+    background-size: cover;
     text-align: center;
     background: #4caf50;
     color: white;
-    padding: 2em;
+    padding: 3em 0;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .hero h1 {
-    margin: 0.5em 0;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero h2 {
+    font-size: 1.75em;
+    margin: 0;
 }
 
 .hero p {
+    font-size: 1.2em;
     margin: 1em 0;
 }
 
@@ -175,6 +277,16 @@ form {
     gap: 1.5em;
 }
 
+form label, form select, form input, form textarea {
+    margin-bottom: 1em;
+}
+
+form input, form textarea, form select {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -198,6 +310,13 @@ form input::placeholder {
     color: #aaa;
 }
 
+form input, form textarea {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
 .btn {
     padding: 0.75em;
     background-color: #4caf50;
@@ -215,13 +334,14 @@ form input::placeholder {
 }
 
 form button {
-    margin-top: 1em;
-    padding: 0.5em;
+    margin-top:  1em;
+    padding: 0.5em 1em;
     background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
     transition: background-color 0.3s;
 }
 
@@ -231,20 +351,23 @@ form button:hover {
 
 .feedback {
     margin-top: 1em;
-    padding: 0.5em;
+    padding: 1em;
     border-radius: 4px;
     display: none;
     text-align: center;
 }
 
 .feedback.success {
-    background-color: #4caf50;
-    color: white;
+    background-color: #d4edda;
+    color: #155734;
+    border: 1px solid #c3e6cb;
+
 }
 
 .feedback.error {
-    background-color: #f44336;
-    color: white;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
 }
 
 @media (max-width: 600px) {
@@ -289,4 +412,35 @@ li:hover {
     .hero {
         padding: 1em;
     }
+}
+
+.filters-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 2em;
+    justify-content: center;
+}
+
+.filters label {
+    font-weight: bold;
+}
+
+.filters input, .filters select, .filters button {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.filters button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filters button:hover {
+    background-color: #45a049;
 }
