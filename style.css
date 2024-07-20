@@ -2,18 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: url(nt.jpeg) no-repeat center center fixed;  
+    background-size: cover;
 }
 
 header {
-    background-color: #4caf50;
-    color: white;
-    padding: 1em;
-    text-align: center;
-}
-
-header {
-    background-color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.8);
     color: white;
     padding: 1em;
     text-align: center;
@@ -47,18 +41,47 @@ header {
     background-color: #45a049;
 }
 
+main {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    margin: 2em;
+    border-radius: 8px;
+}
+
 #testimonials {
-    background-color: #f2f2f2;
+    background: rgba(242, 242, 242, 0.8);
     padding: 2em;
     text-align: center;
+    margin: 2em;
+    border-radius: 8px;
 }
 
 #testimonials h2 {
     margin-bottom: 1em;
 }
 
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
 .testimonial {
-    margin: 1em;
+    margin: 20px auto;
+     max-width: 600px;
+     margin: 20px 2.5%;
+     padding: 20px;
+     background-color: #f9f9f9;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0, 1);
+     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+     text-align: center;
+}
+
+
+.testimonial:hover {
+    transform: translateY(-10px);
 }
 
 .testimonial img {
@@ -68,12 +91,16 @@ header {
     margin-bottom: 0.5em;
 }
 
-.testimonial p {
+.testimonial blockquote {
     font-style: italic;
-    margin-bottom: 0.5em;
+    margin: 0 0 1em;
+    color: #555;    
 }
 
-
+.testimonial cite {
+    font-size: 0.9em;
+    color: #777;
+}
 
 nav a {
     color: white;
@@ -113,7 +140,7 @@ h2 {
     margin-bottom: 1em;
 }
 
-.product.list {
+.products.list {
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
@@ -126,10 +153,10 @@ h2 {
     align-items: center;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 1em;
-    width: 250px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    background-color: rgba(249, 249, 249, 0.8);   
     transition: transform 0.2s, box-shadow 0.2s;
     text-align: center;    
 }
@@ -171,7 +198,7 @@ h2 {
 .product-item .product-description {
     font-size: 0.9em;
     color: #777;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .product-item .product-brand,
@@ -186,12 +213,13 @@ h2 {
 }
 
 .product-item .product-actions {
+    margin-top: 1em;
     display: flex;
     justify-content: space-between;
 }
 
 .product-item .btn {
-    padding: 0.5em 1em;
+    padding: 0.5em;
     background-color: #4caf50;
     color: white;
     padding: 0.5em;
@@ -426,7 +454,9 @@ li:hover {
     font-weight: bold;
 }
 
-.filters input, .filters select, .filters button {
+.filters input, 
+.filters select, 
+.filters button {
     padding: 0.5em;
     margin-top: 0.5em;
     border: 1px solid #ddd;
@@ -443,4 +473,21 @@ li:hover {
 
 .filters button:hover {
     background-color: #45a049;
+}
+
+.filters-section label,
+.filters-section select,
+.filters-section input,
+.filters-section button {
+    margin-bottom: 0.5em;
+}
+
+footer {
+    background-color: rgba(76, 175, 80, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
