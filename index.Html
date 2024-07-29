@@ -6,18 +6,36 @@
          <title>AgroTroca</title>
          <link rel="stylesheet" href="style.css">
      </head>
+
      <body>
          <header>
              <h1>AgroTroca</h1>
              <nav>
-                 <a href="index.Html">Início</a>
-                 <a href="products.html">Produtos</a>
-                 <a href="add_products.html">Adicionar Produtos</a>
-             </nav>           
+                <ul>
+                     <li><a href="index.Html">Início</a></li>
+                     <li><a href="sobre.html">Sobre</a></li>
+                     <li class="nav-item">
+                         <a href="loja.html">Loja</a>
+                     </li>
+                     <li><a href="products.html">Produtos</a></li>
+                     <li><a href="add_products.html">Adicionar Produtos</a></li>
+                     <li><a href="carrinho.html" id="carrinho-link">
+                         <img src="negão.jpg" alt="Carrinho de Compras" id="carrinho-img">
+                         <span id="carrinho-count"></span>
+                    </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>   
+            
          </header>
+
          <main>
              <div id="products-list" class="products-list"></div>
-         </main>        
+         </main> 
+
          <main class="homepage">
              <section class="hero">
                  <div class="hero-content">
@@ -27,28 +45,36 @@
              <a href="products.html" class="btn">Ver produtos</a>
              <a href="add_products.html" class="btn btn-secondary">Adicionar Produtos</a>
                  </div>
+
              </section>
              <div id="products-list" class="products-list"></div>
-         </main>       
+         </main> 
+
          <section id="testimonial">
              <h2>Relatos de Clientes</h2>
              <div class="testimonial=container">
                  <div class="testimonial">
-                 <img src="sera.webp" alt="cliente 1">
+                 <img src="fazendeiro.jpg" alt="cliente 1">
                  <p>"Exelente plataforma! Encontrei exatamente o que estava procurando." </p>
-                 <p> -NOME DO Cliente 1</p>
+                 <p> -José Luís Cutrale.</p>
                  </div>
             
              <div class="testimonial">
-                 <img src="FOTO DO PRODUTO COMPRADO" alt="cliente2">
+                 <img src="fazendeira.jpg" alt="cliente2">
                  <p>"Facilida em comprar e vender produtos de qualidade. REcomendo muito esse site!"</p>
-                 <p>- NOME DO CLIENTE 2</p>
+                 <p>- Rosa Rodrigo De Lima</p>
              </div>
+
              </div>
+
          </section>
+
          <footer>
              <p>&copy; 2024 AgroTroca. Todos os direitos reservados</p>
          </footer>
+
          <script src="script.js"></script>
+         
      </body>
  </html>
+ 
